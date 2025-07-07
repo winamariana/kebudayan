@@ -1,0 +1,182 @@
+/* Reset dan dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Medsos */
+.medsos {
+    background-color: #f78fb3; /* pink terang */
+    padding: 10px 0;
+}
+
+.medsos .container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.medsos ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.medsos ul li a {
+    color: white;
+    font-size: 1.2em;
+}
+
+/* Header */
+header {
+    background: #fff0f6;
+    border-bottom: 2px solid #f8c4dc;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 15px 0;
+}
+
+header h1 {
+    color: #d63384;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header ul li a {
+    padding: 10px 15px;
+    display: inline-block;
+    font-weight: bold;
+    color: #6b2d5c;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+header ul li a:hover,
+header ul li.active a {
+    background-color: #f78fb3;
+    color: white;
+}
+
+/* Banner */
+.banner {
+    height: 60vh;
+    background-image: url('../img/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.banner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(234, 76, 137, 0.5); /* pink transparan */
+}
+
+.banner h2 {
+    z-index: 1;
+    color: white;
+    font-size: 36px;
+    padding: 20px 30px;
+    border: 3px solid white;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+/* Sections */
+section {
+    padding: 60px 20px;
+    background-color: #fff;
+}
+
+section:nth-child(even) {
+    background-color: #ffe4ec;
+}
+
+section h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #d63384;
+    font-size: 28px;
+}
+
+.about p {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+    color: #555;
+    line-height: 1.8;
+    word-spacing: 1.5px;
+}
+
+/* Contact section */
+.contact {
+    background-color: #fbd1e0;
+    padding: 40px 20px;
+    border-top: 2px solid #f8a5c2;
+}
+
+/* Footer */
+footer {
+    padding: 30px 0;
+    background-color: #f5c6da;
+    color: #4b2245;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header ul {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .banner h2 {
+        font-size: 24px;
+        padding: 15px 20px;
+    }
+
+    section h3 {
+        font-size: 24px;
+    }
+
+    .about p {
+        font-size: 16px;
+    }
+}
